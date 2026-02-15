@@ -62,10 +62,13 @@
     <p class="contato">Contato</p>
   </div>
 </section>
-<button id="btnSom" class="btn-som">
-  🔊 Ativar Som
-</button>
-<a href="#" class="whatsapp"><img src="whats.png" alt=""></a>
+<div class="botoes-fixos">
+  <button onclick="ativarSom()" class="btn-som">🔊 Ativar Som</button>
+
+  <a href="https://wa.me/5599999999999" target="_blank" class="whatsapp">
+    <img src="whatsapp.png" alt="WhatsApp">
+  </a>
+</div>
 
 <script type="module" src="Inicio.js"></script>
 <audio id="somInicio" src="louvor.mp3" reload="auto"></audio>
