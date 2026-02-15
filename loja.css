@@ -53,29 +53,6 @@ body {
   transform: translateY(-5px);
 }
 
-/* Animação do Card */
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
-
-.card.animar {
-  animation: pulse 0.3s ease;
-}
-
-/* Animação do Total */
-@keyframes flash {
-  0% { color: white; }
-  50% { color: #20c997; }
-  100% { color: white; }
-}
-
-.animar-total {
-  animation: flash 0.3s ease;
-}
-
-
 /* BOTÕES */
 .botoes {
   display: flex;
@@ -138,4 +115,3 @@ body {
   }
 
 }
-
