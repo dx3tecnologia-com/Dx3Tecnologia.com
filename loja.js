@@ -1,7 +1,7 @@
 let total = 0;
 let carrinho = {};
 
-function adicionar(nome, preco) {
+function adicionar(nome, preco, botao) {
 
   if (!carrinho[nome]) {
     carrinho[nome] = { preco: preco, quantidade: 0 };
@@ -10,8 +10,12 @@ function adicionar(nome, preco) {
   carrinho[nome].quantidade++;
   total += preco;
 
+  animarCard(botao);
+  animarTotal();
+
   atualizarCarrinho();
 }
+
 
 function remover(nome, preco) {
 
@@ -66,4 +70,5 @@ function enviarPedido() {
 /* Botão Sair da Loja  */
 function voltar() {
   window.location.href = "Inicio.html";
+
 }
