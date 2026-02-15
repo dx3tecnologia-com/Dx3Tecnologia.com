@@ -71,7 +71,7 @@ function enviarPedido() {
 
   mensagem += `%0ATotal: R$ ${total}`;
 
-  window.open("https://wa.me/5564974008793?text=" + mensagem);
+  window.open("https://wa.me/5564992123080?text=" + mensagem);
 }
 
 // ANIMAÇÃO CARD
@@ -131,4 +131,5 @@ function voltar() {
   setTimeout(() => {
     window.location.href = "Inicio.html";
   }, 200); // pequeno delay para o som tocar
+
 }
