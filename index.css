@@ -108,13 +108,32 @@ body.inicio {
 
 /* CONTATO */
 .contato {
-  margin-top: 22px;
+  margin-top: 50px;
 }
 
 .contato p {
   color: #ffb3b3;
   font-size: 13px;
   margin-bottom: 8px;
+}
+.redes {
+  display: flex;
+  justify-content: center; /* centraliza */
+  align-items: center;
+  gap: 20px; /* espaço entre os ícones */
+  margin-top: 10px;
+}
+
+.btn-contatowapp,
+.btn-contatoinst {
+  font-size: 22px;
+  color: #79ff3b;
+  transition: 0.3s;
+}
+
+.btn-contatowapp:hover,
+.btn-contatoinst:hover {
+  transform: scale(1.2);
 }
 
 /* MOBILE EXTRA */
