@@ -18,11 +18,16 @@ import {
 const email = document.getElementById("email");
 const senha = document.getElementById("senha");
 const msgEl = document.getElementById("msg");
-const btnLogin = document.getElementById("btnLogin");
 const btnCadastro = document.getElementById("btnCadastro");
+const loginForm = document.getElementById("loginForm");
 
 // 🔹 EVENTOS
-btnLogin.addEventListener("click", login);
+loginForm.addEventListener("submit", function(e) {
+  e.preventDefault();
+  login();
+});
+
+
 btnCadastro.addEventListener("click", cadastrar);
 
 let deferredPrompt;
