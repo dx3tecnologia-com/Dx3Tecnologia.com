@@ -6,12 +6,6 @@ import {
 
 const loadingScreen = document.getElementById("loadingScreen");
 
-const audio = document.getElementById("somInicio");
-const btnSom = document.getElementById("btnSom");
-
-audio.loop = true;
-audio.volume = 0.05; // 🔉 Som baixo
-
 let ativo = false;
 
 // 🔐 VERIFICAÇÃO DE SESSÃO
@@ -42,20 +36,6 @@ onAuthStateChanged(auth, async (user) => {
   
 });
 
-btnSom.addEventListener("click", () => {
-  if (!ativo) {
-    audio.play().catch(() => {});
-    btnSom.innerHTML = "🔇 Som Desativar";
-    btnSom.classList.remove("off");
-    ativo = true;
-  } else {
-    audio.pause();
-    btnSom.innerHTML = "🔊 Som Ativar";
-    btnSom.classList.add("off");
-    ativo = false;
-  }
-});
-
 
 // 🚪 LOGOUT
 document.addEventListener("DOMContentLoaded", () => {
@@ -83,8 +63,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuBtn = document.getElementById("menuBtn");
   const navLinks = document.getElementById("navLinks");
 
-  menuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
+  if (menuBtn && navLinks) {
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  }
 
 });

@@ -82,11 +82,19 @@ body {
 }
 
 .menu {
-  display: none;
-  font-size: 22px;
+  width: 40px;
+  height: 40px;
+  background: #1fb5a8;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 22px;
   cursor: pointer;
+  transition: 0.3s;
 }
+
 
 .logout {
   border-radius: 6px;
@@ -229,11 +237,11 @@ body {
     display: flex;
   }
 
-  .menu {
+.menu {
   width: 40px;
   height: 40px;
-  background: #1fb5a8; /* verde principal */
-  color: white; /* cor do ⋮ */
+  background: #1fb5a8;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -242,6 +250,7 @@ body {
   cursor: pointer;
   transition: 0.3s;
 }
+
 
   .logout {
     border-radius: 3px;
