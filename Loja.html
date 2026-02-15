@@ -3,39 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dx3Tecnologia</title>
+<title>Loja DX3 Tecnologia</title>
 <link rel="stylesheet" href="loja.css">
 </head>
-
 <body>
 
-<div id="loadingScreen" class="loading">
-  <div class="loader"></div>
+<h1>🛒 Loja DX3 Tecnologia</h1>
+
+<div class="topo-loja">
+  <button onclick="voltar()" class="btn-voltar">← Voltar</button>
+</div>
+  
+<div class="container-loja">
+
+  <div class="produtos">
+    <!-- SEUS CARDS AQUI -->
+     <!-- RASTREADOR -->
+  <div class="card">
+  <h2>Rastreador Veicular</h2>
+  <p>R$ <span class="preco">199</span></p>
+
+  <div class="botoes">
+    <button onclick="adicionar('Rastreador Veicular',199)">+</button>
+    <button onclick="remover('Rastreador Veicular',199)">-</button>
+  </div>
 </div>
 
-<header class="topo">
-  <img src="192.png" class="logo">
+  <!-- CAMERA -->
+  <div class="card">
+    <h2>Câmera Monitoramento</h2>
+    <p>R$ <span class="preco">299</span></p>
 
-  <nav class="nav-links" id="navLinks">
-    <a href="Inicio.html">Inicio</a>
-    <a href="#">Quem Somos</a>
-    <a href="#">Atuação</a>
-    <a href="Loja.html">Loja</a>
-    <a href="#">Publicações</a>
-    <button id="logoutBtn" class="logout-mobile">Sair</button>
-  </nav>
-
-  <div class="right-area">
-    <span id="userInfo"></span>
-    <div class="cart">🛒</div>
-    <div class="menu" id="menuBtn">⋮</div>
-    <button id="logoutBtn2" class="logout">Sair</button>
+  <div class="botoes">
+     <button onclick="adicionar('Câmera Monitoramento',299)">+</button>
+      <button onclick="remover('Câmera Monitoramento',299)">-</button>
+    </div>
+   
   </div>
-</header>
 
-</section>
-<a href="#" class="whatsapp"><img src="whats.png" alt=""></a>
+  <!-- COMPONENTE -->
+  <div class="card">
+    <h2>Componentes Eletrônicos</h2>
+    <p>R$ <span class="preco">89</span></p>
 
-<script type="module" src="loja.js"></script>
+    <div class="botoes">
+      <button onclick="adicionar('Componentes Eletrônicos',89)">+</button>
+      <button onclick="remover('Componentes Eletrônicos',89)">-</button>
+    </div>
+
+</div>
+
+<hr>
+
+<div class="carrinho">
+  <h2>🧾 Pedido</h2>
+  <ul id="lista"></ul>
+  <h3>Total: R$ <span id="total">0</span></h3>
+  <button onclick="enviarPedido()">Enviar Pedido</button>
+</div>
+
+<script src="loja.js"></script>
 </body>
 </html>
