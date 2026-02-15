@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rastreamento</title>
+<link rel="stylesheet" href="Inicio.css">
+</head>
+
+<body>
+
+<div id="loadingScreen" class="loading">
+  <div class="loader"></div>
+</div>
+
+<header class="topo">
+  <img src="192.png" class="logo">
+
+  <nav class="nav-links" id="navLinks">
+    <a href="Inicio.html">Inicio</a>
+    <a href="#">Quem Somos</a>
+    <a href="#">Atuação</a>
+    <a href="#">Loja</a>
+    <a href="#">Publicações</a>
+    <button id="logoutBtn" class="logout-mobile">Sair</button>
+  </nav>
+
+  <div class="right-area">
+    <span id="userInfo"></span>
+    <div class="cart">🛒</div>
+    <div class="menu" id="menuBtn">⋮</div>
+    <button id="logoutBtn2" class="logout">Sair</button>
+  </div>
+</header>
+
+
+<section class="hero">
+  <div class="overlay"></div>
+
+  <div class="conteudo">
+    <p class="bemvindo">SEJA BEM VINDO!</p>
+
+    <button 
+  class="btn-plataforma"
+  onclick="window.location.href='https://ap3.stc.srv.br/webcliente/dx3/'">
+  ACESSO A PLATAFORMA
+</button>
+
+    <h1>Tecnologia que protege,<br> inteligência que entrega</h1>
+
+    <div class="linha"></div>
+
+    <p class="descricao">
+      Empresa voltada para segurança de veículos,
+      produtos, pessoas e bens através de rastreamento.
+    </p>
+
+    <button class="btn-secundario">
+      Ver Atuações
+    </button>
+
+    <p class="contato">Contato</p>
+  </div>
+</section>
+<button id="btnSom" class="btn-som">
+  🔊 Ativar Som
+</button>
+<a href="#" class="whatsapp"><img src="whats.png" alt=""></a>
+
+<script type="module" src="Inicio.js"></script>
+<audio id="somInicio" src="louvor.mp3" reload="auto"></audio>
+</body>
+</html>
