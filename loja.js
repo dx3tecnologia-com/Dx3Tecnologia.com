@@ -56,6 +56,24 @@ function atualizarCarrinho() {
   totalEl.innerText = total;
 }
 
+function enviarPedido() {
+  if (Object.keys(carrinho).length === 0) {
+    alert("Adicione produtos primeiro!");
+    return;
+  }
+
+  let mensagem = "Pedido DX3:%0A";
+
+  for (let nome in carrinho) {
+    const item = carrinho[nome];
+    mensagem += `- ${nome} x${item.quantidade} R$${item.preco * item.quantidade}%0A`;
+  }
+
+  mensagem += `%0ATotal: R$ ${total}`;
+
+  window.open("https://wa.me/5564974008793?text=" + mensagem);
+}
+
 // ANIMAÇÃO CARD
 function animarCard(botao) {
   if (!botao) return;
