@@ -21,15 +21,6 @@ body {
   z-index: 999;
 }
 
-.btn-som {
-  background: #00c853;
-  color: white;
-  border: none;
-  padding: 10px 14px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: bold;
-}
 .whatsapp {
   position: fixed;
   bottom: 20px;
@@ -273,3 +264,4 @@ body {
   .hero h1 {
     font-size: 28px;
   }
+
