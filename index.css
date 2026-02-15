@@ -94,27 +94,30 @@ body.inicio {
 
 /* LOGIN */
 .btn.login {
+  transition: 0.5s;
   background: linear-gradient(135deg,#0039b3, #1fb5a8);
   color: #fff;
   border: none;
 }
-
+.btn.login:hover {
+  transform: scale(1.1);
+}
 /* CADASTRO */
 .btn.cadastro {
+  transition: 0.5s;
   background: transparent;
   border: 1px solid #1fb5a8;
   color: white;
 }
-
+.btn.cadastro:hover {
+  transform: scale(1.1) ;
+}
 /* CONTATO */
 .contato {
   margin-top: 50px;
 }
-
 .contato p {
-  color: #ffb3b3;
-  font-size: 13px;
-  margin-bottom: 8px;
+  color: white;
 }
 .redes {
   display: flex;
@@ -126,14 +129,14 @@ body.inicio {
 
 .btn-contatowapp,
 .btn-contatoinst {
-  font-size: 22px;
-  color: #79ff3b;
-  transition: 0.3s;
+  font-size: 30px;
+  color: white;
+  transition: 0.5s;
 }
 
 .btn-contatowapp:hover,
 .btn-contatoinst:hover {
-  transform: scale(1.2);
+  transform: scale(1.5);
 }
 
 /* MOBILE EXTRA */
