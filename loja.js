@@ -66,9 +66,28 @@ function enviarPedido() {
   window.open("https://wa.me/5564974008793?text=" + mensagem);
 }
 
+function animarCard(botao) {
+  const card = botao.closest(".card");
+  card.classList.add("animar");
+
+  setTimeout(() => {
+    card.classList.remove("animar");
+  }, 300);
+}
+
+function animarTotal() {
+  const totalEl = document.getElementById("total");
+  totalEl.classList.add("animar-total");
+
+  setTimeout(() => {
+    totalEl.classList.remove("animar-total");
+  }, 300);
+}
+
 
 /* Botão Sair da Loja  */
 function voltar() {
   window.location.href = "Inicio.html";
 
 }
+
