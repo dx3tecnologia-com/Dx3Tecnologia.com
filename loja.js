@@ -62,7 +62,7 @@ function enviarPedido() {
     return;
   }
 
-  let mensagem = "Pedido DX3:%0A";
+  let mensagem = "Pedido DX3Tecnologia:%0A";
 
   for (let nome in carrinho) {
     const item = carrinho[nome];
@@ -133,3 +133,4 @@ function voltar() {
   }, 200); // pequeno delay para o som tocar
 
 }
+
