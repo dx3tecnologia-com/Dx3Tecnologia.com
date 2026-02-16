@@ -4,13 +4,7 @@ body {
   background: linear-gradient(135deg, #061a2b, #0d2d4d);
   color: white;
 }
-.produto-img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 15px;
-  margin-bottom: 15px;
-}
+
 /* CONTAINER PRINCIPAL */
 .container-loja {
   display: flex;
@@ -23,7 +17,7 @@ body {
 }
 
 .btn-voltar {
-  background: #20c997;
+  background: linear-gradient(45deg, #20c997, #00ffc3);
   border: none;
   padding: 8px 15px;
   border-radius: 8px;
@@ -34,7 +28,7 @@ body {
 }
 
 .btn-voltar:hover {
-  background: #17a589;
+  transform: scale(1.05);
 }
 
 /* PRODUTOS */
@@ -42,72 +36,119 @@ body {
   flex: 3;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 20px;
+  gap: 25px;
 }
 
-/* CARD */
+/* CARD PREMIUM */
 .card {
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(8px);
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
   padding: 20px;
-  border-radius: 16px;
+  border-radius: 20px;
   text-align: center;
   transition: 0.3s;
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.05);
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 0 40px rgba(0,255,195,0.4);
+}
+
+/* IMAGEM */
+.produto-img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+.card:hover .produto-img {
+  transform: scale(1.05);
+}
+
+/* TITULO */
+.card h3 {
+  margin: 10px 0 5px;
+  font-size: 20px;
+}
+
+/* PREÇO */
+.card p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #00ffc3;
 }
 
 /* BOTÕES */
 .botoes {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
   margin-top: 15px;
 }
 
 .botoes button {
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 18px;
   cursor: pointer;
   color: white;
+  transition: 0.3s;
 }
 
 .botoes button:first-child {
-  background: #00b4d8;
+  background: linear-gradient(45deg, #00b4d8, #0077b6);
 }
 
 .botoes button:last-child {
-  background: #e63946;
+  background: linear-gradient(45deg, #e63946, #b00020);
 }
 
-/* CARRINHO LATERAL */
+.botoes button:hover {
+  transform: scale(1.1);
+}
+
+/* CARRINHO */
 .carrinho {
   flex: 1;
-  background: rgba(255,255,255,0.05);
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
   padding: 20px;
-  border-radius: 16px;
+  border-radius: 20px;
   height: fit-content;
   position: sticky;
   top: 20px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+}
+
+.carrinho h2 {
+  margin-top: 0;
 }
 
 .carrinho button {
-  background: #20c997;
+  background: linear-gradient(45deg, #20c997, #00ffc3);
   border: none;
-  padding: 10px;
-  border-radius: 8px;
+  padding: 12px;
+  border-radius: 10px;
   color: white;
   width: 100%;
   cursor: pointer;
   margin-top: 15px;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-/* RESPONSIVO MOBILE */
+.carrinho button:hover {
+  transform: scale(1.05);
+}
+
+/* RESPONSIVO */
 @media (max-width: 768px) {
 
   .container-loja {
@@ -121,4 +162,3 @@ body {
   }
 
 }
-

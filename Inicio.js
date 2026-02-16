@@ -5,8 +5,18 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 
 const loadingScreen = document.getElementById("loadingScreen");
+const musica = document.getElementById("musicaFundo");
 
 let ativo = false;
+
+  document.addEventListener("click", function () {
+    if (musica.paused) {
+      musica.volume = 0.5; // volume 50%
+      musica.play().catch(() => {});
+    } else {
+      musica.pause();
+    }
+  });
 
 // 🔐 VERIFICAÇÃO DE SESSÃO
 onAuthStateChanged(auth, async (user) => {
