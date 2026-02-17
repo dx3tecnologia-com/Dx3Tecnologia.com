@@ -1,210 +1,122 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Loja DX3 Tecnologia</title>
-<link rel="stylesheet" href="loja.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja DX3 Tecnologia</title>
+  <link rel="stylesheet" href="loja.css">
 </head>
+
 <body>
 
-<div class="topo-loja">
-  <h1>
-    <img src="192.png" alt="Logo Dx3Rastreamento" class="logo"> 🛒 
-  </h1>
-  <button 
-    onclick="voltar()" class="btn-voltar">← Voltar
-  </button>
-</div>
+<!-- HEADER -->
+<header class="header-loja">
 
-<div class="carrinho">
-  <h2>🧾Seus Pedidos Adiçionados</h2>
-  <ul id="lista"></ul>
-  <h3>Total: R$ <span id="total">0</span></h3>
-  <button onclick="enviarPedido()">Enviar Pedido</button>
-</div>
-
-<div class="container-loja">
-
-  <div class="produtos">
-     <!-- RASTREADOR -->
-  <div class="card">
-  <img src="192.png" class="produto-img">
-  <h2>Rastreador Veicular</h2>
-  <p>R$ <span class="preco">199</span></p>
-
-  <div class="botoes">
-    <button onclick="adicionar('Rastreador Veicular',199)">+</button>
-    <button onclick="remover('Rastreador Veicular',199)">-</button>
-  </div>
-</div>
-
-<div class="card">
-  <img src="192.png" class="produto-img">
-  <h2>Rastreador Veicular</h2>
-  <p>R$ <span class="preco">199</span></p>
-
-  <div class="botoes">
-    <button onclick="adicionar('Rastreador Veicular',199)">+</button>
-    <button onclick="remover('Rastreador Veicular',199)">-</button>
-  </div>
-</div>
-
-<div class="card">
-  <img src="192.png" class="produto-img">
-  <h2>Rastreador Veicular</h2>
-  <p>R$ <span class="preco">199</span></p>
-
-  <div class="botoes">
-    <button onclick="adicionar('Rastreador Veicular',199)">+</button>
-    <button onclick="remover('Rastreador Veicular',199)">-</button>
-  </div>
-</div>
-
-<div class="card">
-  <img src="192.png" class="produto-img">
-  <h2>Rastreador Veicular</h2>
-  <p>R$ <span class="preco">199</span></p>
-
-  <div class="botoes">
-    <button onclick="adicionar('Rastreador Veicular',199)">+</button>
-    <button onclick="remover('Rastreador Veicular',199)">-</button>
-  </div>
-</div>
-
-<div class="card">
-  <img src="192.png" class="produto-img">
-  <h2>Rastreador Veicular</h2>
-  <p>R$ <span class="preco">199</span></p>
-
-  <div class="botoes">
-    <button onclick="adicionar('Rastreador Veicular',199)">+</button>
-    <button onclick="remover('Rastreador Veicular',199)">-</button>
-  </div>
-</div>
-
-  <!-- CAMERA -->
-  <div class="card">
-    <img src="192.png" class="produto-img">
-    <h2>Câmera Monitoramento</h2>
-    <p>R$ <span class="preco">299</span></p>
-
-  <div class="botoes">
-     <button onclick="adicionar('Câmera Monitoramento',299)">+</button>
-      <button onclick="remover('Câmera Monitoramento',299)">-</button>
-    </div>
-   
+  <div class="logo-area">
+    <img src="192.png" class="logo">
   </div>
 
-<div class="card">
-    <img src="192.png" class="produto-img">
-    <h2>Câmera Monitoramento</h2>
-    <p>R$ <span class="preco">299</span></p>
-
-  <div class="botoes">
-     <button onclick="adicionar('Câmera Monitoramento',299)">+</button>
-      <button onclick="remover('Câmera Monitoramento',299)">-</button>
-    </div>
-   
+  <div class="busca-area">
+    <input type="text" placeholder="Buscar rastreadores, câmeras...">
+    <button>🔍</button>
   </div>
 
-<div class="card">
-    <img src="192.png" class="produto-img">
-    <h2>Câmera Monitoramento</h2>
-    <p>R$ <span class="preco">299</span></p>
-
-  <div class="botoes">
-     <button onclick="adicionar('Câmera Monitoramento',299)">+</button>
-      <button onclick="remover('Câmera Monitoramento',299)">-</button>
-    </div>
-   
+  <div class="acoes-topo">
+    <button onclick="voltar()" class="btn-voltar">Início</button>
   </div>
 
-<div class="card">
-    <img src="192.png" class="produto-img">
-    <h2>Câmera Monitoramento</h2>
-    <p>R$ <span class="preco">299</span></p>
+</header>
 
-  <div class="botoes">
-     <button onclick="adicionar('Câmera Monitoramento',299)">+</button>
-      <button onclick="remover('Câmera Monitoramento',299)">-</button>
+<!-- LAYOUT PRINCIPAL -->
+<div class="layout-loja">
+
+  <!-- PRODUTOS -->
+  <section class="area-produtos">
+    <div class="produtos">
+
+      <div class="card-produto">
+        <img src="192.png" class="produto-img">
+        <h2>Rastreador Veicular</h2>
+        <p>R$ <span class="preco">199</span></p>
+        <div class="botoes">
+          <button onclick="adicionar('Rastreador Veicular',199)">+</button>
+          <button onclick="remover('Rastreador Veicular',199)">-</button>
+        </div>
+      </div>
+<div class="card-produto">
+        <img src="192.png" class="produto-img">
+        <h2>Rastreador Veicular</h2>
+        <p>R$ <span class="preco">199</span></p>
+        <div class="botoes">
+          <button onclick="adicionar('Rastreador Veicular',199)">+</button>
+          <button onclick="remover('Rastreador Veicular',199)">-</button>
+        </div>
+      </div>
+      <div class="card-produto">
+        <img src="192.png" class="produto-img">
+        <h2>Rastreador Veicular</h2>
+        <p>R$ <span class="preco">199</span></p>
+        <div class="botoes">
+          <button onclick="adicionar('Rastreador Veicular',199)">+</button>
+          <button onclick="remover('Rastreador Veicular',199)">-</button>
+        </div>
+      </div>
+      <div class="card-produto">
+        <img src="192.png" class="produto-img">
+        <h2>Rastreador Veicular</h2>
+        <p>R$ <span class="preco">199</span></p>
+        <div class="botoes">
+          <button onclick="adicionar('Rastreador Veicular',199)">+</button>
+          <button onclick="remover('Rastreador Veicular',199)">-</button>
+        </div>
+      </div>
+      <div class="card-produto">
+        <img src="192.png" class="produto-img">
+        <h2>Rastreador Veicular</h2>
+        <p>R$ <span class="preco">199</span></p>
+        <div class="botoes">
+          <button onclick="adicionar('Rastreador Veicular',199)">+</button>
+          <button onclick="remover('Rastreador Veicular',199)">-</button>
+        </div>
+      </div>
+      <div class="card-produto">
+        <img src="192.png" class="produto-img">
+        <h2>Rastreador Veicular</h2>
+        <p>R$ <span class="preco">199</span></p>
+        <div class="botoes">
+          <button onclick="adicionar('Rastreador Veicular',199)">+</button>
+          <button onclick="remover('Rastreador Veicular',199)">-</button>
+        </div>
+      </div>
+      <div class="card-produto">
+        <img src="192.png" class="produto-img">
+        <h2>Rastreador Veicular</h2>
+        <p>R$ <span class="preco">199</span></p>
+        <div class="botoes">
+          <button onclick="adicionar('Rastreador Veicular',199)">+</button>
+          <button onclick="remover('Rastreador Veicular',199)">-</button>
+        </div>
+      </div>
+      <!-- DUPLIQUE AQUI PARA MAIS PRODUTOS -->
+
     </div>
-   
-  </div>
+  </section>
 
-<div class="card">
-    <img src="192.png" class="produto-img">
-    <h2>Câmera Monitoramento</h2>
-    <p>R$ <span class="preco">299</span></p>
+  <!-- CARRINHO -->
+  <aside class="carrinho-lateral">
+    <h2>🧾 Seus Pedidos</h2>
+    <ul id="lista"></ul>
+    <h3>Total: R$ <span id="total">0</span></h3>
+    <button onclick="enviarPedido()">Enviar Pedido</button>
+  </aside>
 
-  <div class="botoes">
-     <button onclick="adicionar('Câmera Monitoramento',299)">+</button>
-      <button onclick="remover('Câmera Monitoramento',299)">-</button>
-    </div>
-   
-  </div>
-
-  <!-- COMPONENTE -->
-  <div class="card">
-    <img src="192.png" class="produto-img">
-    <h2>Componentes Eletrônicos</h2>
-    <p>R$ <span class="preco">89</span></p>
-
-    <div class="botoes">
-      <button onclick="adicionar('Componentes Eletrônicos',89)">+</button>
-      <button onclick="remover('Componentes Eletrônicos',89)">-</button>
-    </div>
-</div>
-
- <div class="card">
-    <img src="192.png" class="produto-img">
-    <h2>Componentes Eletrônicos</h2>
-    <p>R$ <span class="preco">89</span></p>
-
-    <div class="botoes">
-      <button onclick="adicionar('Componentes Eletrônicos',89)">+</button>
-      <button onclick="remover('Componentes Eletrônicos',89)">-</button>
-    </div>
-</div>
-
- <div class="card">
-    <img src="192.png" class="produto-img">
-    <h2>Componentes Eletrônicos</h2>
-    <p>R$ <span class="preco">89</span></p>
-
-    <div class="botoes">
-      <button onclick="adicionar('Componentes Eletrônicos',89)">+</button>
-      <button onclick="remover('Componentes Eletrônicos',89)">-</button>
-    </div>
-</div>
-
- <div class="card">
-    <img src="192.png" class="produto-img">
-    <h2>Componentes Eletrônicos</h2>
-    <p>R$ <span class="preco">89</span></p>
-
-    <div class="botoes">
-      <button onclick="adicionar('Componentes Eletrônicos',89)">+</button>
-      <button onclick="remover('Componentes Eletrônicos',89)">-</button>
-    </div>
-</div>
-
- <div class="card">
-    <img src="192.png" class="produto-img">
-    <h2>Componentes Eletrônicos</h2>
-    <p>R$ <span class="preco">89</span></p>
-
-    <div class="botoes">
-      <button onclick="adicionar('Componentes Eletrônicos',89)">+</button>
-      <button onclick="remover('Componentes Eletrônicos',89)">-</button>
-    </div>
 </div>
 
 <script src="loja.js"></script>
+
 <audio id="somAdd" src="click.mp3" preload="auto"></audio>
 <audio id="somRemove" src="lixo.wav" preload="auto"></audio>
 <audio id="somVoltar" src="lixo.wav" preload="auto"></audio>
+
 </body>
-
 </html>
-
